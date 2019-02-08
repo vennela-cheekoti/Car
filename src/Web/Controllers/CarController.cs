@@ -12,15 +12,19 @@ namespace Web.Controllers
     {
          public IActionResult ShowText()
     {
-      return Content("This is a new car");
+      return Content("Here are some cars Available:"+"\n"+
+      "1.Audi\n"+
+      "2.BMW\n"+
+      "3.Ford\n"+
+      "4.Honda\n");
     }
     public IActionResult ShowJSON()
     {
-      return  Json(new {name="New car", car="This is my new car."});
+      return  Json(new {name="Audi", price="$130,000",name1="BMW", price1="$140,0000",name2="Ford",price2="$150,000",name3="Honda",price3="160,000"});
     }
     public IActionResult ShowHTML()
     {
-      var h = "<!DOCTYPE html><html><body>This is a new car.</body></html>";
+      var h = "<!DOCTYPE html><html><body>Here are some cars Available<br> 1.Audi<br> 2.BMW<br> 3.Ford<br> 4.Honda</body></html>";
       return Content(h, "text/html");
     }
 
